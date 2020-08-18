@@ -1,8 +1,16 @@
 import React from 'react'
 
+import Navbar from './Navbar'
+import Form from './Form'
+
 const App = () => {
     return(
-        <div>App</div>
+        <div>
+            <Navbar />
+            <div className="container">
+                <Form />
+            </div>
+        </div>
     )
 }
 
