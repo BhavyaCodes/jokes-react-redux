@@ -1,7 +1,10 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { formSubmit } from '../actions'
 
-const Form = () => {
+const Form = (props) => {
     return(
+        <div>
         <form>
             <div className="form-group">
                 <h4>Categories:</h4>
@@ -45,9 +48,16 @@ const Form = () => {
                         Pun
                     </label>
                 </div>
+                
             </div>
         </form>
+        <button onClick={()=>props.formSubmit('test')} className="btn btn-primary">Submit</button>
+        </div>
     )
 }
 
-export default Form
+const mapStateToProps = (state) => {
+    return
+}
+
+export default connect(null, {formSubmit})(Form)
