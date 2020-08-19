@@ -4,6 +4,7 @@ import { formSubmit } from '../actions'
 
 import Categories from './Categories'
 import Flags from './Flags'
+import SearchBar from './SearchBar'
 
 
 
@@ -16,11 +17,12 @@ const Form = (props) => {
 
     return(
         <div>
-        <form onSubmit={(event)=>test(event)}>
-            <Categories />
-            <Flags />
-            <button type="submit" className="btn btn-primary">Submit</button>
-        </form>
+            <form onSubmit={(event)=>test(event)}>
+                <SearchBar />
+                <Categories />
+                <Flags />
+                <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
         </div>
     )
 }
