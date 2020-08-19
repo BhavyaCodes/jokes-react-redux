@@ -11,7 +11,7 @@ const formReducer = (state=[], action) => {
         }
     }
 }
-const initialCategoryState = {programming: false, misc: false, pun: false, dark: false}
+const initialCategoryState = {all:true, programming: false, misc: false, pun: false, dark: false}
 const categoryReducer = (state=initialCategoryState, action) => {
     switch(action.type){
         case 'CATEGORIES':{
