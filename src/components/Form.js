@@ -13,13 +13,18 @@ const Form = (props) => {
 
     props.getJokes()
 
+    const refresh = (event) => {
+        event.preventDefault()
+        props.getJokes()
+    }
+
     return(
         <div>
-            <form onSubmit={(event)=>test(event)}>
+            <form onSubmit={(event)=>refresh(event)}>
                 <SearchBar />
                 <Categories />
                 <Flags />
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button className="btn btn-primary">refresh</button>
             </form>
         </div>
     )
