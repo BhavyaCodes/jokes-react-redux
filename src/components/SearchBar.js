@@ -13,6 +13,7 @@ const SearchBar = (props) => {
                 placeholder="Optional"
                 value={props.term}
                 onChange={(event)=>props.searchTerm(event.target.value)}
+                autoComplete="off"
             />
         </div>
     )
