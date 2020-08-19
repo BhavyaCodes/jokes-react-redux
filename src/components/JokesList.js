@@ -11,4 +11,8 @@ const JokesList = (props) => {
     )
 }
 
-export default connect(null, { getJokes })(JokesList)
+const mapStateToProps = (state) => {
+    return {state}
+}
+
+export default connect(mapStateToProps, { getJokes })(JokesList)

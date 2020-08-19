@@ -53,11 +53,11 @@ const Categories = (props) => {
                     <input
                         className="form-check-input"
                         type="checkbox"
-                        id="misc"
+                        id="miscellaneous"
                         onChange={(event)=>handleCheckboxChange(event)}
-                        checked={props.categories.misc && !props.categories.all}
+                        checked={props.categories.miscellaneous && !props.categories.all}
                     />
-                    <label className="form-check-label" htmlFor="misc">
+                    <label className="form-check-label" htmlFor="miscellaneous">
                         Miscellaneous
                     </label>
                 </div>
