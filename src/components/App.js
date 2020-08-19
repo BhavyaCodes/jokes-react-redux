@@ -10,7 +10,7 @@ const App = () => {
             <Navbar />
             <div className="container">
                 <div className="row">
-                    <div className="col-sm-12 col-md-6 col-lg-4">
+                    <div className="col-sm-12 col-md-6 col-lg-4 my-3">
                         <Form />
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-8">
