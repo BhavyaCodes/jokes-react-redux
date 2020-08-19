@@ -8,7 +8,14 @@ const App = () => {
         <div>
             <Navbar />
             <div className="container">
-                <Form />
+                <div className="row">
+                    <div className="col-sm-12 col-md-6 col-lg-4">
+                        <Form />
+                    </div>
+                    <div className="col-sm-12 col-md-6 col-lg-8">
+                        jokes
+                    </div>
+                </div>
             </div>
         </div>
     )
