@@ -2,6 +2,7 @@ import React from 'react'
 
 import Navbar from './Navbar'
 import Form from './Form'
+import JokesList from './JokesList'
 
 const App = () => {
     return(
@@ -13,7 +14,7 @@ const App = () => {
                         <Form />
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-8">
-                        jokes
+                        <JokesList />
                     </div>
                 </div>
             </div>

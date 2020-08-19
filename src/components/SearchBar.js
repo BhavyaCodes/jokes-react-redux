@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { searchTerm } from '../actions'
 
 const SearchBar = (props) => {
-    console.log(props.term)
     return(
         <div className="form-group">
             <h4 htmlFor="searchTerm">Search Term</h4>

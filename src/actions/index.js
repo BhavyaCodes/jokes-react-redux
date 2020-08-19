@@ -1,3 +1,5 @@
+import jokesApi from '../api/jokesApi'
+
 export const formSubmit = (formData) => {
     return {
         type: 'FORM',
@@ -24,4 +26,15 @@ export const searchTerm = (term) => {
         type: 'SEARCH',
         payload: term
     }
+}
+
+export const getJokes = () => async (dispatch, getState) => {
+    console.log(getState)
+    try {
+        const response =  await jokesApi.get('/Any?amount=5')
+        console.log(response)
+    } catch (error) {
+        console.log(error)
+    }
+
 }
