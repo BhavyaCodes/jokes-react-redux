@@ -36,6 +36,7 @@ export const getJokes = () => async (dispatch, getState) => {
     console.log(search)
 
     let categoryString = ''
+    let flagString = ''
 
     if (categories.all){
         categoryString = 'any'
@@ -48,9 +49,23 @@ export const getJokes = () => async (dispatch, getState) => {
         }
         categoryString = categoryString.slice(0,-1)
     }
+
+    for (const prop in flags){
+        if(flags[prop]){
+            flagString += prop.toString() +','
+        }
+    }
+    flagString = flagString.slice(0,-1)
+
     console.log(categoryString)
+    console.log(flagString)
     try {
-        const response =  await jokesApi.get(`/${categoryString}?amount=5`)
+        const response =  await jokesApi.get(`/${categoryString}?amount=5`,{
+            params: {
+                blacklistFlags: flagString,
+                contains: search
+            }
+        })
         console.log(response)
     } catch (error) {
         console.log(error)
