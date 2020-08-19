@@ -21,7 +21,7 @@ const Flags = (props) => {
                         onChange={(event)=>handleCheckboxChange(event)}
                         checked={props.flags.nsfw}
                     />
-                    <label className="form-check-label" htmlFor="programming">
+                    <label className="form-check-label" htmlFor="nsfw">
                         nsfw
                     </label>
                 </div>
@@ -33,7 +33,7 @@ const Flags = (props) => {
                         onChange={(event)=>handleCheckboxChange(event)}
                         checked={props.flags.religious}
                     />
-                    <label className="form-check-label" htmlFor="programming">
+                    <label className="form-check-label" htmlFor="religious">
                         religious
                     </label>
                 </div>
@@ -45,7 +45,7 @@ const Flags = (props) => {
                         onChange={(event)=>handleCheckboxChange(event)}
                         checked={props.flags.political}
                     />
-                    <label className="form-check-label" htmlFor="programming">
+                    <label className="form-check-label" htmlFor="political">
                         political
                     </label>
                 </div>
@@ -57,7 +57,7 @@ const Flags = (props) => {
                         onChange={(event)=>handleCheckboxChange(event)}
                         checked={props.flags.racist}
                     />
-                    <label className="form-check-label" htmlFor="programming">
+                    <label className="form-check-label" htmlFor="racist">
                         racist
                     </label>
                 </div>
@@ -69,7 +69,7 @@ const Flags = (props) => {
                         onChange={(event)=>handleCheckboxChange(event)}
                         checked={props.flags.sexist}
                     />
-                    <label className="form-check-label" htmlFor="programming">
+                    <label className="form-check-label" htmlFor="sexist">
                         sexist
                     </label>
                 </div>

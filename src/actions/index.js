@@ -29,19 +29,14 @@ export const searchTerm = (term) => {
 }
 
 export const getJokes = () => async (dispatch, getState) => {
-    // console.log(getState)
+    // console.log(getState())
     const {categories, flags, search} = getState()
-    console.log(categories)
-    console.log(flags)
-    console.log(search)
-
     let categoryString = ''
     let flagString = ''
 
     if (categories.all){
         categoryString = 'any'
     } else {
-        
         for (const prop in categories){
             if(categories[prop]){
                 categoryString += prop.toString() +','
@@ -57,16 +52,14 @@ export const getJokes = () => async (dispatch, getState) => {
     }
     flagString = flagString.slice(0,-1)
 
-    console.log(categoryString)
-    console.log(flagString)
     try {
         const response =  await jokesApi.get(`/${categoryString}?amount=5`,{
             params: {
-                blacklistFlags: flagString,
-                contains: search
+                blacklistFlags: flagString || undefined,
+                contains: search || undefined
             }
         })
-        console.log(response)
+        dispatch({type:'FETCH_JOKES', payload: response.data.jokes})
     } catch (error) {
         console.log(error)
     }

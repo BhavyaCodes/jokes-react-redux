@@ -19,7 +19,6 @@ const SearchBar = (props) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return {term: state.search}
 }
 

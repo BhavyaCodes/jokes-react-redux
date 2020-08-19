@@ -52,9 +52,21 @@ const searchReducer = (state='', action) => {
     }
 }
 
+const fetchJokesReducer = (state=[], action) => {
+    switch (action.type){
+        case 'FETCH_JOKES':{
+            return action.payload
+        }
+        default:{
+            return state
+        }
+    }
+}
+
 export default combineReducers({
     formReducer,
     categories: categoryReducer,
     flags: flagsReducer,
-    search: searchReducer
+    search: searchReducer,
+    jokes: fetchJokesReducer
 })
