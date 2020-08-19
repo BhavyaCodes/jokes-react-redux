@@ -18,3 +18,10 @@ export const selectFlags = (flags)=>{
         payload: flags
     }
 }
+
+export const searchTerm = (term) => {
+    return{
+        type: 'SEARCH',
+        payload: term
+    }
+}
