@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { formSubmit } from '../actions'
 
 import Categories from './Categories'
+import Flags from './Flags'
 
 
 
@@ -17,6 +18,7 @@ const Form = (props) => {
         <div>
         <form onSubmit={(event)=>test(event)}>
             <Categories />
+            <Flags />
             <button type="submit" className="btn btn-primary">Submit</button>
         </form>
         </div>

@@ -11,3 +11,10 @@ export const selectCategory = (categories) => {
         payload: categories
     }
 }
+
+export const selectFlags = (flags)=>{
+    return {
+        type: 'FLAGS',
+        payload: flags
+    }
+}

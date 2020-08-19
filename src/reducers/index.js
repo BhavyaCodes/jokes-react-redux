@@ -24,7 +24,25 @@ const categoryReducer = (state=initialCategoryState, action) => {
     }
 }
 
+const flagsReducer = (state={
+    nsfw: false,
+    religious: false,
+    political: false,
+    racist: false,
+    sexist: false
+}, action) => {
+    switch(action.type){
+        case 'FLAGS':{
+            return {...state, ...(action.payload)}
+        }
+        default:{
+            return state
+        }
+    }
+}
+
 export default combineReducers({
     formReducer,
-    categories: categoryReducer
+    categories: categoryReducer,
+    flags: flagsReducer
 })
