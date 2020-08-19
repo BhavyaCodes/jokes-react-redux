@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import Form from './Form'
 import JokesList from './JokesList'
 import {Helmet} from 'react-helmet'
-import logo from '../images/icon.jpg'
+import logo from '../images/logo512.png'
 
 const App = () => {
     return(
