@@ -1,9 +1,9 @@
 import React from 'react'
 
-const SingleJoke = (props) => {
+const SingleJoke = ({joke}) => {
     return(
-        <div>
-            SingleJoke
+        <div className="col-lg-6">
+            {joke.joke}
         </div>
     )
 }

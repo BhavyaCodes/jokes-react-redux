@@ -1,9 +1,10 @@
 import React from 'react'
 
-const TwoPartJoke = (props) => {
+const TwoPartJoke = ({joke}) => {
     return(
-        <div>
-            TwoPartJoke
+        <div className="col-lg-6">
+            <p>{joke.setup}</p>
+            <p>{joke.delivery}</p>
         </div>
     )
 }

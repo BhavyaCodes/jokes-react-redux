@@ -53,7 +53,7 @@ export const getJokes = () => async (dispatch, getState) => {
     flagString = flagString.slice(0,-1)
 
     try {
-        const response =  await jokesApi.get(`/${categoryString}?amount=5`,{
+        const response =  await jokesApi.get(`/${categoryString}?amount=6`,{
             params: {
                 blacklistFlags: flagString || undefined,
                 contains: search || undefined

@@ -6,22 +6,28 @@ import TwoPartJoke from './TwoPartJoke'
 
 const JokesList = (props) => {
 
-    const RenderJokes = (jokes) => {
-        if (jokes.error){
+    const RenderJokes = () => {
+        if ((props.jokes).length === 0){
             return (
-                <h2>No results found! try changing filters and search bar</h2>
+                <div>No Jokes found! try updating the filters</div>
             )
         }
-        return null
+
+        const renderedJokes = props.jokes.map(joke=>{
+            if (joke.type === 'single'){
+                return (<SingleJoke key={joke.id} joke={joke}/>)
+            }
+            return (<TwoPartJoke key={joke.id} joke={joke}/>)
+        })
+
+        return renderedJokes
     }
 
     console.log(props.jokes)
 
     return(
-        <div>
+        <div className="row">
             <RenderJokes />
-            <SingleJoke />
-            <TwoPartJoke />
         </div>
     )
 }
