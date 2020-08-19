@@ -55,7 +55,7 @@ const searchReducer = (state='', action) => {
 const fetchJokesReducer = (state=[], action) => {
     switch (action.type){
         case 'FETCH_JOKES':{
-            return action.payload
+            return action.payload || []
         }
         default:{
             return state

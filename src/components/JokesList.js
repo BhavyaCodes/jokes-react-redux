@@ -6,8 +6,6 @@ import TwoPartJoke from './TwoPartJoke'
 
 const JokesList = (props) => {
 
-    console.log(props.jokes)
-
     const RenderJokes = (jokes) => {
         if (jokes.error){
             return (
@@ -16,6 +14,8 @@ const JokesList = (props) => {
         }
         return null
     }
+
+    console.log(props.jokes)
 
     return(
         <div>
