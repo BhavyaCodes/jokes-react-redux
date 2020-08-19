@@ -8,11 +8,15 @@ const SingleJoke = ({joke}) => {
                     {joke.joke}
                 </div>
                 <div className="card-footer">
-                    {joke.category === 'Programming' ? <span className="badge badge-pill badge-primary">Programming</span>:null}
-                    {joke.category === 'Dark' ? <span className="badge badge-pill badge-dark">Dark</span>:null}
-                    {joke.flags.nsfw ? <span className="badge badge-pill badge-danger">nsfw</span>:null}
-                    {joke.flags.racist ? <span className="badge badge-pill badge-dark">racist</span>:null}
-                    {joke.flags.sexist ? <span className="badge badge-pill badge-warning">sexist</span>:null}
+                    {joke.category === 'Programming' ? <span className="mx-1 badge badge-pill badge-primary">Programming</span>:null}
+                    {joke.category === 'Dark' ? <span className="mx-1 badge badge-pill badge-dark">Dark</span>:null}
+                    {joke.category === 'Miscellaneous' ? <span className="mx-1 badge badge-pill badge-info">Miscellaneous</span>:null}
+                    {joke.category === 'Pun' ? <span className="mx-1 badge badge-pill badge-warning">Pun</span>:null}
+                    {joke.flags.nsfw ? <span className="mx-1 badge badge-pill badge-danger">nsfw</span>:null}
+                    {joke.flags.racist ? <span className="mx-1 badge badge-pill badge-dark">racist</span>:null}
+                    {joke.flags.sexist ? <span className="mx-1 badge badge-pill badge-warning">sexist</span>:null}
+                    {joke.flags.political ? <span className="mx-1 badge badge-pill badge-info">political</span>:null}
+                    {joke.flags.religious ? <span className="mx-1 badge badge-pill badge-success">religious</span>:null}
                 </div>
             </div>
         </div>
