@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { formSubmit } from '../actions'
+import { getJokes } from '../actions'
 
 import Categories from './Categories'
 import Flags from './Flags'
@@ -10,10 +11,7 @@ import SearchBar from './SearchBar'
 
 const Form = (props) => {
 
-    const test = (event) =>{
-        event.preventDefault()
-        console.log(props.state)
-    }
+    props.getJokes()
 
     return(
         <div>
@@ -29,7 +27,7 @@ const Form = (props) => {
 
 
 const mapStateToProps = (state) => {
-    return {state: state}
+    return {categories: state.categories, flags: state.flags, search: state.search}
 }
 
-export default connect(mapStateToProps, {formSubmit})(Form)
+export default connect(mapStateToProps, {formSubmit, getJokes})(Form)
